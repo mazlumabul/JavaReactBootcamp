@@ -2,12 +2,12 @@ package abstracts;
 
 import entities.Customer;
 
-public abstract class BaseCustomerManager implements CustomerService {
+public abstract class BaseCustomerManager implements CustomerService{
 
 	@Override
-	public void save(Customer customer) {
-		System.out.println("Save to Db : " + customer.getFirstName());
+	public  void save(Customer customer) {
+		System.out.println("Save to DB : " + customer.getFirstName());
 		
 	}
-	
+
 }

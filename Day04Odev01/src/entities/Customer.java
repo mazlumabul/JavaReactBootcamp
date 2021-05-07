@@ -1,26 +1,21 @@
 package entities;
 
-import java.util.Date;
+import java.time.LocalDate;
 
-import abstracts.CustomerService;
+import abstracts.Entity;
 
-public class Customer implements CustomerService{
+public class Customer implements Entity  {
 	private int id;
 	private String firstName;
-	private String LastName;
-	private String dateOfBirth;
+	private String lastName;
+	private LocalDate dateOfBirth;
 	private String nationalityId;
 
-	/*
-	public Customer() {
-
-	}
-	*/
-	public Customer(int id, String firstName, String lastName, String dateOfBirth, String nationalityId) {
+	public Customer(int id, String firstName, String lastName, LocalDate dateOfBirth, String nationalityId) {
 
 		this.id = id;
 		this.firstName = firstName;
-		LastName = lastName;
+		this.lastName = lastName;
 		this.dateOfBirth = dateOfBirth;
 		this.nationalityId = nationalityId;
 	}
@@ -42,18 +37,18 @@ public class Customer implements CustomerService{
 	}
 
 	public String getLastName() {
-		return LastName;
+		return lastName;
 	}
 
 	public void setLastName(String lastName) {
-		LastName = lastName;
+		this.lastName = lastName;
 	}
 
-	public String getDateOfBirth() {
+	public LocalDate getDateOfBirth() {
 		return dateOfBirth;
 	}
 
-	public void setDateOfBirth(String dateOfBirth) {
+	public void setDateOfBirth(LocalDate dateOfBirth) {
 		this.dateOfBirth = dateOfBirth;
 	}
 
@@ -64,13 +59,5 @@ public class Customer implements CustomerService{
 	public void setNationalityId(String nationalityId) {
 		this.nationalityId = nationalityId;
 	}
-
-	@Override
-	public void save(Customer customer) {
-		// TODO Auto-generated method stub
-		
-	}
-	
-	
 
 }
